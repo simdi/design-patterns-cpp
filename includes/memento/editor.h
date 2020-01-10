@@ -2,7 +2,7 @@
 #define EDITOR_H
 
 #include <string>
-#include <editorState.h>
+#include "editorState.h"
 
 using namespace std;
 

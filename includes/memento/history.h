@@ -2,7 +2,7 @@
 #define HISTORY_H
 
 #include <vector>
-#include <editorState.h>
+#include "editorState.h"
 
 using namespace std;
 
