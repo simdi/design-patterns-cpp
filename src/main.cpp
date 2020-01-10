@@ -1,17 +1,12 @@
 #include <iostream>
+#include <includes/memento/editor.h>
+#include <includes/memento/history.h>
 
 using namespace std;
 
-class User {
-public:
-  User(string name) : name(name) {}
-  string name;
-};
-
 int main() {
-  User user("Chisimdi");
-
-  cout << user.name << endl;
+  Editor editor;
+  History history;
 
   return 0;
 }
