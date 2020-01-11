@@ -1,20 +1,33 @@
 #include <iostream>
 #include "../includes/memento/editor.h"
 #include "../includes/memento/history.h"
+#include "../includes/state/canvas.h"
+#include "../includes/state/selectionTool.h"
 
 using namespace std;
 
 int main() {
-  Editor editor;
-  History history;
+  /*
+  * Memento Pattern
+  */
+  // Editor editor;
+  // History history;
+  // editor.Content("John");
+  // history.Push(editor.CreateState());
+  // editor.Content("Doe");
+  // history.Push(editor.CreateState());
+  // editor.Content("Ebere");
+  // editor.Restore(history.Pop());
+  // cout << "Last state: " << editor.Content() << endl;
 
-  editor.Content("John");
-  history.Push(editor.CreateState());
-  editor.Content("Doe");
-  history.Push(editor.CreateState());
-  editor.Content("Ebere");
-  editor.Restore(history.Pop());
+  /*
+  * State Pattern
+  */
+  Canvas canvas;
+  SelectionTool *selectionTool;
+  canvas.CurrentTool(selectionTool);
+  canvas.mouseDown();
+  canvas.mouseUp();
 
-  cout << "Last state: " << editor.Content() << endl;
   return 0;
 }
