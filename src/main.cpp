@@ -10,15 +10,15 @@ int main() {
   /*
   * Memento Pattern
   */
-  Editor editor;
-  History history;
-  editor.Content("John");
-  history.Push(editor.CreateState());
-  editor.Content("Doe");
-  history.Push(editor.CreateState());
-  editor.Content("Ebere");
-  editor.Restore(history.Pop());
-  cout << "Last state: " << editor.Content() << endl;
+  // Editor editor;
+  // History history;
+  // editor.Content("John");
+  // history.Push(editor.CreateState());
+  // editor.Content("Doe");
+  // history.Push(editor.CreateState());
+  // editor.Content("Ebere");
+  // editor.Restore(history.Pop());
+  // cout << "Last state: " << editor.Content() << endl;
 
   /*
   * State Pattern
