@@ -1,7 +1,6 @@
 #ifndef FACTORY_H
 #define FACTORY_H
 #include "vehicle.h"
-#include "../../includes/factory/factory.h"
 #include "../../includes/factory/two_wheeler.h"
 #include "../../includes/factory/three_wheeler.h"
 #include "../../includes/factory/four_wheeler.h"
@@ -13,7 +12,7 @@ enum VehicleType {
 class Factory {
 public:
   Factory(){};
-  static Vehicle* create(VehicleType type)  {
+  static Vehicle* create(VehicleType type) {
     if (type == VT_TwoWheeler) {
       return new TwoWheeler();
     } else if (type == VT_ThreeWheeler) {

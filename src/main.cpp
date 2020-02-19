@@ -4,6 +4,7 @@
 #include "../includes/state/canvas.h"
 #include "../includes/state/selectionTool.h"
 #include "../includes/factory/factory.h"
+#include "../includes/singleton/singleton.h"
 
 using namespace std;
 
@@ -12,14 +13,19 @@ int main() {
   * Creational Patterns
   */
   // Factory Pattern
-  VehicleType type = VT_TwoWheeler;
-  Vehicle *pVehicle = NULL;
-  pVehicle = Factory::create(type);
-  pVehicle->printVehicle();
+  // VehicleType type = VT_TwoWheeler;
+  // Vehicle *pVehicle = NULL;
+  // pVehicle = Factory::create(type);
+  // pVehicle->printVehicle();
+  // type = VT_FourWheeler;
+  // pVehicle = Factory::create(type);
+  // pVehicle->printVehicle();
 
-  type = VT_FourWheeler;
-  pVehicle = Factory::create(type);
-  pVehicle->printVehicle();
+  // Singleton Pattern
+  Singleton *singleton = Singleton::getInstance();
+  Singleton *singleton2 = Singleton::getInstance();
+
+  std::cout << "Singleton 1: " << singleton << " " << singleton2 << std::endl;
 
 
 
