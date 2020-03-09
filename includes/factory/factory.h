@@ -11,7 +11,7 @@ enum VehicleType {
 
 class Factory {
 public:
-  Factory(){};
+  Factory() = delete;
   static Vehicle* create(VehicleType type) {
     if (type == VT_TwoWheeler) {
       return new TwoWheeler();

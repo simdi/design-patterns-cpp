@@ -5,6 +5,7 @@
 #include "../includes/state/selectionTool.h"
 #include "../includes/factory/factory.h"
 #include "../includes/singleton/singleton.h"
+#include "../includes/factory/coffee.h"
 
 using namespace std;
 
@@ -21,11 +22,16 @@ int main() {
   // pVehicle = Factory::create(type);
   // pVehicle->printVehicle();
 
-  // Singleton Pattern
-  Singleton *singleton = Singleton::getInstance();
-  Singleton *singleton2 = Singleton::getInstance();
+  CoffeeMakerFactory coffeeMachine;
+  std::auto_ptr<Coffee> cup = coffeeMachine.create();
 
-  std::cout << "Singleton 1: " << singleton << " " << singleton2 << std::endl;
+  std::cout << "The Type of coffee you ordered for is: " << cup->getType() << std::endl;
+
+  // Singleton Pattern
+  // Singleton *singleton = Singleton::getInstance();
+  // Singleton *singleton2 = Singleton::getInstance();
+
+  // std::cout << "Singleton 1: " << singleton << " " << singleton2 << std::endl;
 
 
 
